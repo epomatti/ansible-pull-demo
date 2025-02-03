@@ -11,5 +11,9 @@
       changed_when: false
 
   tasks:
+    - name: Includes users
+      ansible.builtin.include_tasks: tasks/users.yml
+    - name: Includes cron
+      ansible.builtin.include_tasks: tasks/cron.yml
     - name: Includes the required packages
       ansible.builtin.include_tasks: tasks/packages.yml

@@ -1,0 +1,6 @@
+- name: Install cron job (ansible-pull)
+  cron:
+    user: ansible
+    name: "ansible provision"
+    minute: "*/10"
+    job: "/bin/bash /opt/epomatti/ansible-pull-demo/tasks/scripts/pull.sh"

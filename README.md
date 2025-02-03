@@ -31,6 +31,7 @@ sudo ansible-pull -U https://github.com/epomatti/ansible-pull-demo.git
 ```
 cat /etc/passwd
 crontab -u ansible -l
+grep CRON /var/log/syslog
 
 # https://medium.com/planetarynetworks/ansible-pull-with-private-github-repository-d147fdf6f60b
 

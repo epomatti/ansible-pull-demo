@@ -1,6 +1,6 @@
 ---
-- hosts: localhost
-  name: Install htop
+- name: Install htop
+  hosts: localhost
   connection: local
   become: true
 
@@ -8,4 +8,3 @@
   - name: Install htop
     apt:
       name: htop
-      state: present

@@ -28,4 +28,12 @@ sudo ansible-pull -U https://github.com/epomatti/ansible-pull-demo.git
 ```
 
 
+```
+cat /etc/passwd
+crontab -u ansible -l
+
 # https://medium.com/planetarynetworks/ansible-pull-with-private-github-repository-d147fdf6f60b
+
+
+# https://youtu.be/sn1HQq_GFNE
+# https://youtu.be/3RiVKs8GHYQ?list=PLT98CRl2KxKEUHie1m24-wkyHpEsa4Y70

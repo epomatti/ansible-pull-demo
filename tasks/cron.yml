@@ -2,5 +2,5 @@
   cron:
     user: ansible
     name: "ansible provision"
-    minute: "*/10"
+    minute: "*/1"
     job: "/bin/bash /opt/epomatti/ansible-pull-demo/tasks/scripts/pull.sh"

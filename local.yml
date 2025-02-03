@@ -1,0 +1,11 @@
+---
+- hosts: localhost
+  name: Install htop
+  connection: local
+  become: true
+
+  tasks:
+  - name: Install htop
+    apt:
+      name: htop
+      state: present

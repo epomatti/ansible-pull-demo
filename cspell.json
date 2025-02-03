@@ -8,7 +8,9 @@
         "cpus",
         "epmtt",
         "noninteractive",
-        "virtualbox"
+        "venv",
+        "virtualbox",
+        "virtualenv"
     ],
     "ignoreWords": [],
     "import": []

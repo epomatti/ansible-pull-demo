@@ -18,3 +18,14 @@ source .venv/bin/activate
 
 python3 -m pip install --upgrade pip
 python3 -m pip install -r requirements.txt
+
+
+> [!NOTE]
+> Use the `https` URL
+
+```
+sudo ansible-pull -U https://github.com/epomatti/ansible-pull-demo.git
+```
+
+
+# https://medium.com/planetarynetworks/ansible-pull-with-private-github-repository-d147fdf6f60b

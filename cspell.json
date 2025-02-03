@@ -6,7 +6,9 @@
     "words": [
         "ansible",
         "cpus",
+        "dnsutils",
         "epmtt",
+        "iputils",
         "noninteractive",
         "venv",
         "virtualbox",

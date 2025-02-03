@@ -36,5 +36,7 @@ grep CRON /var/log/syslog
 # https://medium.com/planetarynetworks/ansible-pull-with-private-github-repository-d147fdf6f60b
 
 
+service cron start
+
 # https://youtu.be/sn1HQq_GFNE
 # https://youtu.be/3RiVKs8GHYQ?list=PLT98CRl2KxKEUHie1m24-wkyHpEsa4Y70

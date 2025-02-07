@@ -77,7 +77,7 @@ The next `ansible-pull` command was adapted from [this page](https://medium.com/
 For development purposes, create a `/opt/ansible/pull.sh` script:
 
 > ![TIP]
-> Create link for `ln -s /opt/ansible/pull.sh /home/vagrant/push.sh`
+> Create link for `ln -s /opt/ansible/pull.sh /home/vagrant/pull.sh`
 
 ```sh
 #!/bin/bash
@@ -93,6 +93,12 @@ bash pull.sh
 ```
 
 ### Crontab
+
+To a
+
+```sh
+sudo systemctl stop cron
+```
 
 Check the crontab logs:
 

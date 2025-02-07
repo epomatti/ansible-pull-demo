@@ -1,19 +1,19 @@
-# - name: Create the directory
-#   ansible.builtin.file:
-#     path: /usr/share/postgresql-common/pgdg
-#     state: directory
-#     mode: '0755'
-
 - name: Add an Apt signing key, uses whichever key is at the URL
   ansible.builtin.apt_key:
     url: https://www.postgresql.org/media/keys/ACCC4CF8.asc
     state: present
     keyring: /etc/apt/trusted.gpg.d/postgresql.gpg
 
-# sudo curl -o /usr/share/postgresql-common/pgdg/apt.postgresql.org.asc --fail https://www.postgresql.org/media/keys/ACCC4CF8.asc
-
 - name: Configure the PostgreSQL repository
   ansible.builtin.apt_repository:
     repo: deb [arch=amd64] http://apt.postgresql.org/pub/repos/apt jammy-pgdg main
     filename: /etc/apt/sources.list.d/pgdg.list
     state: present
+
+- name: Install a list of packages
+  ansible.builtin.apt:
+    pkg:
+    - pgdg-keyring
+    - postgresql-client
+    - libpq-dev
+    update_cache: yes

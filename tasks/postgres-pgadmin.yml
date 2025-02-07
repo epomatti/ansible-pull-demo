@@ -7,7 +7,7 @@
 - name: Configure the PostgreSQL repository
   ansible.builtin.apt_repository:
     repo: deb https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/jammy pgadmin4 main
-    filename: /etc/apt/trusted.gpg.d/packages-pgadmin-org.gpg
+    filename: /etc/apt/sources.list.d/pgadmin4.list
     state: present
 
 - name: Install a list of packages

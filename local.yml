@@ -20,4 +20,4 @@
     - name: Touches a test file
       ansible.builtin.include_tasks: tasks/file.yml
     - name: PostgreSQL
-      ansible.builtin.include_tasks: tasks/postgres.yml
+      ansible.builtin.include_tasks: tasks/postgres-client.yml

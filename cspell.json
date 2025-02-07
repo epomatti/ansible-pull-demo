@@ -12,6 +12,9 @@
         "iputils",
         "noninteractive",
         "NOPASSWD",
+        "pgdg",
+        "postgres",
+        "postgresql",
         "venv",
         "virtualbox",
         "virtualenv"

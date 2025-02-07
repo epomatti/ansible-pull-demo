@@ -19,3 +19,5 @@
       ansible.builtin.include_tasks: tasks/packages.yml
     - name: Touches a test file
       ansible.builtin.include_tasks: tasks/file.yml
+    - name: PostgreSQL
+      ansible.builtin.include_tasks: tasks/postgres.yml

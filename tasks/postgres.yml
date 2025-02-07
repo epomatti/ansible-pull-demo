@@ -1,0 +1,5 @@
+- name: Configure the PostgreSQL repository
+  ansible.builtin.apt_repository:
+    repo: deb [arch=amd64] http://apt.postgresql.org/pub/repos/apt jammy-pgdg main
+    filename: /etc/apt/sources.list.d/pgdg.list
+    state: present

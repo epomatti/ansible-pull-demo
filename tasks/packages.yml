@@ -4,4 +4,4 @@
       - htop
       - mc
       - tmux
-      - flock
+      - util-linux # This will install flock

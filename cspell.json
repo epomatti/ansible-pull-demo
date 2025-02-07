@@ -11,6 +11,7 @@
         "fqcn",
         "iputils",
         "libpq",
+        "linux",
         "noninteractive",
         "NOPASSWD",
         "pgadmin",

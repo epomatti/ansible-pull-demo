@@ -76,7 +76,7 @@ The next `ansible-pull` command was adapted from [this page](https://medium.com/
 
 For development purposes, create a `/opt/ansible/pull.sh` script:
 
-> ![TIP]
+> [!TIP]
 > Create link for `ln -s /opt/ansible/pull.sh /home/vagrant/pull.sh`
 
 ```sh

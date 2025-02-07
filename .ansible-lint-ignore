@@ -1,0 +1,6 @@
+# This file contains ignores rule violations for ansible-lint
+compose.yml yaml[new-line-at-end-of-file]
+local.yml fqcn[action-core]
+tasks/cron.yml fqcn[action-core]
+tasks/file.yml yaml[new-line-at-end-of-file]
+tasks/users.yml fqcn[action-core]

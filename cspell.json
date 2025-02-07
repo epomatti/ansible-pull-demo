@@ -8,6 +8,7 @@
         "cpus",
         "dnsutils",
         "epmtt",
+        "fqcn",
         "iputils",
         "noninteractive",
         "NOPASSWD",

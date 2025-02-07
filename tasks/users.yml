@@ -1,11 +1,11 @@
 - name: Create ansible user
-  user:
+  ansible.builtin.user:
     name: ansible
     system: true
     create_home: false
 
 - name: Copy sudoers_ansible
-  copy:
+  ansible.builtin.copy:
     src: files/sudoers_ansible
     dest: /etc/sudoers.d/ansible
     owner: root

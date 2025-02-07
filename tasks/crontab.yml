@@ -3,5 +3,5 @@
     name: "check dirs"
     minute: "*"
     hour: "*"
-    job: "sudo /usr/bin/flock -w 0 /opt/ansible/cron.lock /opt/ansible/pull.sh"
+    job: "sudo /usr/bin/flock -w 0 /opt/ansible/cron.lock /opt/ansible/pull.sh >> /var/log/ansible-pull.log"
     user: ansible

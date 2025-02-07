@@ -94,9 +94,19 @@ bash pull.sh
 
 ### Crontab
 
+Check the crontab logs:
 
-
+```sh
+sudo tail -f /var/log/syslog
 ```
+
+The cron output has been configure to this file:
+
+```sh
+sudo tail -f /var/log/ansible-pull.log
+```
+
+
 cat /etc/passwd
 crontab -u ansible -l
 grep CRON /var/log/syslog

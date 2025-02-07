@@ -11,13 +11,15 @@
       changed_when: false
 
   tasks:
-    - name: Includes users
-      include_tasks: tasks/users.yml
-    - name: Includes cron
-      ansible.builtin.include_tasks: tasks/cron.yml
-    - name: Includes the required packages
-      ansible.builtin.include_tasks: tasks/packages.yml
-    - name: Touches a test file
-      ansible.builtin.include_tasks: tasks/file.yml
-    - name: PostgreSQL
+    # - name: Includes users
+    #   include_tasks: tasks/users.yml
+    # - name: Includes cron
+    #   ansible.builtin.include_tasks: tasks/cron.yml
+    # - name: Includes the required packages
+    #   ansible.builtin.include_tasks: tasks/packages.yml
+    # - name: Touches a test file
+    #   ansible.builtin.include_tasks: tasks/file.yml
+    - name: PostgreSQL Client
       ansible.builtin.include_tasks: tasks/postgres-client.yml
+    - name: PostgreSQL PgAdmin
+      ansible.builtin.include_tasks: tasks/postgres-pgadmin.yml

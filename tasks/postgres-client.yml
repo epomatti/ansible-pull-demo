@@ -13,7 +13,7 @@
 - name: Install a list of packages
   ansible.builtin.apt:
     pkg:
-    - pgdg-keyring
-    - postgresql-client
-    - libpq-dev
-    update_cache: yes
+      - pgdg-keyring
+      - postgresql-client
+      - libpq-dev
+    update_cache: true

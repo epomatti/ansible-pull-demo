@@ -62,7 +62,7 @@ docker compose exec workstation /bin/bash
 
 This section is executed from within the control node.
 
-### Simple pull command
+### Simple Pull Command
 
 > [!TIP]
 > A fork will be required to create tokens in the account
@@ -94,11 +94,7 @@ bash pull.sh
 
 ### Crontab
 
-To a
-
-```sh
-sudo systemctl stop cron
-```
+The [local.yml](local.yml) file will create a cron job to pull new configuration every minute. The package [flock](https://manpages.ubuntu.com/manpages/jammy/man1/flock.1.html) will be used to prevent cron job overlap.
 
 Check the crontab logs:
 
@@ -106,20 +102,21 @@ Check the crontab logs:
 sudo tail -f /var/log/syslog
 ```
 
-The cron output has been configure to this file:
+The script output will be redirected to this file:
 
 ```sh
 sudo tail -f /var/log/ansible-pull.log
 ```
 
+To make ad-hoc adjustments to the local configuration:
 
-cat /etc/passwd
-crontab -u ansible -l
-grep CRON /var/log/syslog
+```sh
+sudo systemctl stop cron
 ```
 
-service cron start
+## Reference Content
 
-# https://youtu.be/sn1HQq_GFNE
-# https://youtu.be/3RiVKs8GHYQ?list=PLT98CRl2KxKEUHie1m24-wkyHpEsa4Y70
-# https://youtu.be/gIDywsGBqf4
+- [Using Ansible "Pull" Mode to Dynamically Automate Server/Workstation Builds](https://youtu.be/sn1HQq_GFNE)
+- [Getting started with Ansible 01 - Introduction](https://youtu.be/3RiVKs8GHYQ?list=PLT98CRl2KxKEUHie1m24-wkyHpEsa4Y70)
+- [Using Ansible to automate your Laptop and Desktop configs!](https://youtu.be/gIDywsGBqf4)
+- [Encrypting Files with Ansible Vault](https://youtu.be/xeBnAbmt3Wk)

@@ -1,0 +1,7 @@
+- name: Ensure job runs every minute"
+  ansible.builtin.cron:
+    name: "check dirs"
+    minute: "*"
+    hour: "*"
+    job: "sudo /usr/bin/flock -w 0 /opt/ansible/cron.lock /opt/ansible/pull.sh"
+    user: ansible

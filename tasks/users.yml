@@ -2,6 +2,7 @@
   user:
     name: ansible
     system: true
+    create_home: false
 
 - name: Copy sudoers_ansible
   copy:

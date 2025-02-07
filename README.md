@@ -74,7 +74,10 @@ Connect to the GitHub account and generate a [new token](https://github.com/sett
 
 The next `ansible-pull` command was adapted from [this page](https://medium.com/planetarynetworks/ansible-pull-with-private-github-repository-d147fdf6f60b).
 
-For development purposes, create a `pull.sh` script:
+For development purposes, create a `/opt/ansible/pull.sh` script:
+
+> ![TIP]
+> Create link for `ln -s /opt/ansible/pull.sh /home/vagrant/push.sh`
 
 ```sh
 #!/bin/bash
@@ -90,6 +93,7 @@ bash pull.sh
 ```
 
 ### Crontab
+
 
 
 ```

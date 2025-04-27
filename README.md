@@ -50,6 +50,9 @@ vagrant ssh
 
 ### Docker
 
+> [!TIP]
+> In case of docker fetch errors, you may try `docker system prune -a`
+
 For lightweight docker environment, set it up:
 
 ```sh
@@ -112,6 +115,33 @@ To make ad-hoc adjustments to the local configuration:
 
 ```sh
 sudo systemctl stop cron
+```
+
+## Ansible Vault
+
+Create the key file, and add a secure password:
+
+```sh
+touch ~/.vault_key
+chmod 600 ~/.vault_key
+```
+
+Encrypt files (they must be commited to the repository):
+
+```sh
+ansible-vault encrypt --vault-password-file ~/.vault_key secret.txt
+```
+
+Decrypt the files locally:
+
+```sh
+ansible-vault decrypt --vault-password-file ~/.vault_key secret.txt
+```
+
+When pulling, use the key:
+
+```sh
+ansibel pull --vault-password-file
 ```
 
 ## Reference Content

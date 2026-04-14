@@ -1,13 +1,9 @@
-- name: Verify integrity of sudoers files
-  # hosts: all
-  # become: yes
-  tasks:
-    - name: Check syntax of specific sudoers.d file
-      ansible.builtin.command: /usr/sbin/visudo -cf /etc/sudoers.d/99-developers
-      register: sudo_check
-      changed_when: false
-      failed_when: "'parsed OK' not in sudo_check.stdout"
+- name: Check syntax of specific sudoers.d file
+  ansible.builtin.command: /usr/sbin/visudo -cf /etc/sudoers.d/99-developers
+  register: sudo_check
+  changed_when: false
+  failed_when: "'parsed OK' not in sudo_check.stdout"
 
-    - name: Report status
-      ansible.builtin.debug:
-        msg: "Sudoers syntax is valid."
+- name: Report status
+  ansible.builtin.debug:
+    msg: "Sudoers syntax is valid."

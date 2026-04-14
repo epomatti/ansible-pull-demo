@@ -11,3 +11,11 @@
     owner: root
     group: root
     mode: '0440'
+
+- name: Create developer user
+  ansible.builtin.user:
+    name: developer
+    create_home: true
+    shell: /bin/bash
+    append: true
+    groups: developers

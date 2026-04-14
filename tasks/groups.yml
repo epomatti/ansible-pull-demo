@@ -1,0 +1,4 @@
+- name: Ensure group "developers" exists
+  ansible.builtin.group:
+    name: developers
+    state: present

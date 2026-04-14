@@ -11,6 +11,8 @@
       changed_when: false
 
   tasks:
+    - name: Includes groups
+      ansible.builtin.include_tasks: tasks/groups.yml
     - name: Includes users
       ansible.builtin.include_tasks: tasks/users.yml
     - name: Includes the required packages

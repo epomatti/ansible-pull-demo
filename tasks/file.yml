@@ -1,5 +1,13 @@
-- name: Touch a file, using symbolic modes to set the permissions (equivalent to 0644)
-  ansible.builtin.file:
-    path: /tmp/foo.txt
-    state: touch
-    mode: u=rw,g=r,o=r
+# - name: Touch a file, using symbolic modes to set the permissions (equivalent to 0644)
+#   ansible.builtin.file:
+#     path: /tmp/foo.txt
+#     state: touch
+#     mode: u=rw,g=r,o=r
+
+- name: Copy the "developers" sudoers fragement file
+  ansible.builtin.copy:
+    src: files/developers
+    dest: /etc/sudoers.d/99-developers
+    owner: root
+    group: root
+    mode: "0440"

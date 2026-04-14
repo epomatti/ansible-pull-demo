@@ -1,0 +1,22 @@
+# vim: syntax=properties
+
+# APT
+%developers ALL=(ALL) /usr/bin/apt update, /usr/bin/apt upgrade, /usr/bin/apt purge, /usr/bin/apt remove, /usr/bin/apt autoremove
+%developers ALL=(ALL) /usr/bin/apt-get update, /usr/bin/apt-get upgrade, /usr/bin/apt-cache, /usr/bin/apt-get purge, /usr/bin/apt-get remove
+
+# Docker
+%developers ALL=(ALL) NOPASSWD: /usr/bin/systemctl start docker, /usr/bin/systemctl stop docker, /usr/bin/systemctl restart docker, /usr/bin/systemctl status docker
+
+# Network
+%developers ALL=(ALL) NOPASSWD: /usr/bin/systemctl restart networking, /usr/bin/systemctl status networking
+%developers ALL=(ALL) NOPASSWD: /usr/bin/systemctl restart NetworkManager, /usr/bin/systemctl status NetworkManager
+
+# Veracrypt
+%developers ALL=(ALL) NOPASSWD: /usr/bin/veracrypt*
+
+# Ubuntu Pro
+%developers ALL=(ALL) NOPASSWD: /usr/bin/pro status*
+%developers ALL=(ALL) NOPASSWD: /usr/bin/pro security-status*
+
+# Other
+%developers ALL=(ALL) NOPASSWD: /usr/bin/true

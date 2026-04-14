@@ -9,12 +9,20 @@ apt:
   sources:
     ansible-ppa:
       source: "ppa:ansible/ansible"
+    veracrypt-ppa:
+      source: "ppa:unit193/encryption"
 
 packages:
   - curl
   - git
-  # Ansible PPA
   - software-properties-common
   - ansible
+  - veracrypt
+
+runcmd:
+  - [ sh, -c, "curl -fsSL https://get.docker.com -o get-docker.sh" ]
+  - [ sh, get-docker.sh ]
+  - [ systemctl, enable, --now, docker ]
+  - [ usermod, -aG, docker, ubuntu ]
 
 final_message: "System is up after $UPTIME seconds"

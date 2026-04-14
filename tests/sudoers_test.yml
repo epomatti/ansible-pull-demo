@@ -4,6 +4,17 @@
   changed_when: false
   failed_when: "'parsed OK' not in sudo_check.stdout"
 
-- name: Report status
-  ansible.builtin.debug:
-    msg: "Sudoers syntax is valid."
+- name: Verify "developer" can restart docker
+  ansible.builtin.command: /usr/bin/systemctl restart docker
+  become: yes
+  become_user: developer
+  register: sudo_test
+  changed_when: false
+  failed_when: sudo_test.rc != 0
+
+- name: Verify "developer" can check networking status
+  ansible.builtin.command: /usr/bin/systemctl status networking
+  become_user: developer
+  register: sudo_test
+  changed_when: false
+  failed_when: sudo_test.rc != 0

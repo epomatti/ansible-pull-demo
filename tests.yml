@@ -1,0 +1,11 @@
+---
+- name: Run the test suite
+  hosts: localhost
+  connection: local
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+  become: false
+
+  tasks:
+    - name: Sudoers
+      ansible.builtin.include_tasks: tests/sudoers_test.yml

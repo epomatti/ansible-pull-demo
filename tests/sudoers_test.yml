@@ -1,6 +1,13 @@
-- name: Apply restricted sudoers config
-  ansible.builtin.copy:
-    src: developers
-    dest: /etc/sudoers.d/99-developers
-    mode: '0440'
-    validate: /usr/sbin/visudo -cf %s
+- name: Verify integrity of sudoers files
+  # hosts: all
+  become: yes
+  tasks:
+    - name: Check syntax of specific sudoers.d file
+      ansible.builtin.command: /usr/sbin/visudo -cf /etc/sudoers.d/99-developers
+      register: sudo_check
+      changed_when: false
+      failed_when: "'parsed OK' not in sudo_check.stdout"
+
+    - name: Report status
+      ansible.builtin.debug:
+        msg: "Sudoers syntax is valid."

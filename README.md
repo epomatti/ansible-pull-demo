@@ -179,9 +179,29 @@ When pulling, use the key:
 ansibel pull --vault-password-file
 ```
 
+## Testing
+
+> [!TIP]
+> This is about [test strategies][test_strategies] for testing the application you are deploying
+
+The primary tool for this should be [Molecule][molecule].
+
+```sh
+bash local.sh
+```
+
+Running the tests:
+
+```sh
+bash tests.sh
+```
+
 ## Reference Content
 
 - [Using Ansible "Pull" Mode to Dynamically Automate Server/Workstation Builds](https://youtu.be/sn1HQq_GFNE)
 - [Getting started with Ansible 01 - Introduction](https://youtu.be/3RiVKs8GHYQ?list=PLT98CRl2KxKEUHie1m24-wkyHpEsa4Y70)
 - [Using Ansible to automate your Laptop and Desktop configs!](https://youtu.be/gIDywsGBqf4)
 - [Encrypting Files with Ansible Vault](https://youtu.be/xeBnAbmt3Wk)
+
+[test_strategies]: https://docs.ansible.com/projects/ansible/latest/reference_appendices/test_strategies.html
+[molecule]: https://docs.ansible.com/projects/molecule/

@@ -1,6 +1,6 @@
 - name: Verify integrity of sudoers files
   # hosts: all
-  become: yes
+  # become: yes
   tasks:
     - name: Check syntax of specific sudoers.d file
       ansible.builtin.command: /usr/sbin/visudo -cf /etc/sudoers.d/99-developers

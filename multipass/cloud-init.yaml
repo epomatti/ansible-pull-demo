@@ -5,15 +5,16 @@ package_reboot_if_required: false # multipass will handle the reboot if necessar
 
 timezone: America/Sao_Paulo
 
-packages:
-  - curl
-  - git
-  # Ansible PPA
-  - software-properties-common 
-
 apt:
   sources:
     ansible-ppa:
       source: "ppa:ansible/ansible"
+
+packages:
+  - curl
+  - git
+  # Ansible PPA
+  - software-properties-common
+  - ansible
 
 final_message: "System is up after $UPTIME seconds"

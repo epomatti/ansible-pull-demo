@@ -34,7 +34,7 @@ Depending on yor preference, the following provisioning options are available in
 Launch the instance:
 
 ```ps1
-multipass launch 26.04 `
+multipass launch 24.04 `
   --name vm-ansible `
   --cpus 4 `
   --memory 8G `
@@ -43,18 +43,25 @@ multipass launch 26.04 `
   --cloud-init .\multipass\cloud-init.yaml
 ```
 
-Connect:
+Connect via SSH:
 
 ```ps1
 multipass shell vm-ansible
 ```
 
-Check if `*** System restart required ***`.
+Check if `*** System restart required ***`. If so, `sudo reboot`.
 
 Verify the cloud-init status:
 
 ```sh
 cloud-init status
+```
+
+Check logs if necessary:
+
+```sh
+/var/log/cloud-init-output.log
+/var/log/cloud-init.log
 ```
 
 ### VirtualBox

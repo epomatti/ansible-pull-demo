@@ -27,7 +27,35 @@ python3 -m pip install -r requirements.txt
 
 ## Control Node
 
-Depending on yor preference, two node provisioning options are available in this repository.
+Depending on yor preference, the following provisioning options are available in this repository.
+
+### Multipass
+
+Launch the instance:
+
+```ps1
+multipass launch 26.04 `
+  --name vm-ansible `
+  --cpus 4 `
+  --memory 8G `
+  --disk 50G `
+  --timeout 1800 `
+  --cloud-init .\multipass\cloud-init.yaml
+```
+
+Connect:
+
+```ps1
+multipass shell vm-ansible
+```
+
+Check if `*** System restart required ***`.
+
+Verify the cloud-init status:
+
+```sh
+cloud-init status
+```
 
 ### VirtualBox
 
